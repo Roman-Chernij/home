@@ -1,0 +1,30 @@
+.header__logo {
+  padding: 15px 0 10px 0;
+  width: 184px;
+  float: none;
+  margin: 0 auto;
+  @media (min-width: 720px) {
+    padding: 48px 0 45px 0;
+  }
+  @media (min-width: 940px) {
+    float: left;
+    margin: 0;
+  }
+}
+
+.logo {
+  font-family: arial, sans-serif;
+}
+
+.logo__elem {
+  font-size: 35px;
+}
+
+.logo__elem__item {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo__font-weight {
+  font-weight: 600;
+}

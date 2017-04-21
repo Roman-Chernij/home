@@ -1,0 +1,116 @@
+.section {
+    &__page-blog {
+      background-color: #fff;
+      background-position: center 0;
+      padding-top: 20px;
+      @media (min-width: 960px) {
+        padding-top: 116px;
+      }
+    }
+    &-content {
+      width: 100%;
+      margin: 0 auto 40px;
+      float: none;
+        @media (min-width: 840px) {
+          width: 93%;
+          float: none;
+
+        }
+        @media (min-width: 960px) {
+          width: 76%;
+          margin: 0;
+          float: left;
+        }
+        @media (min-width: 1020px) {
+          width: 73.81%;
+        }
+    }
+    &-sidebar {
+      width: 100%;
+      float: none;
+        @media (min-width: 960px) {
+          width: 23%;
+          margin: 0;
+          float: right;
+        }
+    }
+    &__about {
+      padding-top: 30px;
+      padding-bottom: 0;
+      @media (min-width: 1270px) {
+        padding-top: 167px;
+        padding-bottom: 143px;
+      }
+
+
+    }
+    &__service {
+      padding-bottom: 30px;
+      @media (min-width: 1270px) {
+        padding-bottom: 167px;
+      }
+    }
+    &__statistic {
+      background-image: url('../img/bg-statistic.jpg');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      @media (min-width: 1270px) {
+        padding-top: 137px;
+        padding-bottom: 153px;
+      }
+    }
+    &__work {
+      padding-top: 30px;
+      padding-bottom: 25px;
+      @media (min-width: 1270px) {
+        padding-top: 183px;
+        padding-bottom: 100px;
+      }
+    }
+    &__story {
+      padding-top: 20px;
+      padding-bottom: 110px;;
+      @media (min-width: 1270px) {
+        padding-top: 44px;
+        padding-bottom: 263px;
+      }
+
+    }
+    &__life-story {
+      background-color: #262626;
+      padding-bottom: 63px;
+    }
+    &__feedback {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      @media (min-width: 1270px) {
+        padding-top: 178px;
+        padding-bottom: 146px;
+      }
+    }
+    &__tweet {
+      background-image: url('../img/bg-tweet.jpg');
+      padding-top: 60px;
+      padding-bottom: 70px;
+      @media (min-width: 1270px) {
+        padding-top: 123px;
+        padding-bottom: 154px;
+      }
+    }
+    &__box-form {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      @media (min-width: 1270px) {
+        padding-top: 183px;
+        padding-bottom: 178px;
+      }
+    }
+    &__map {
+      height: 685px;
+      width: 100%;
+      position: relative;
+    }
+}

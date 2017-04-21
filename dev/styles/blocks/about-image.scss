@@ -1,0 +1,26 @@
+.about-image {
+  width: 100%;
+  height: 600px;
+  float: none;
+  background-image: url("../img/aboutImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  @media (min-width: 600px) {
+    height: 700px;
+  }
+  @media (min-width: 780px) {
+    height: 845px;
+  }
+    @media (min-width: 950px) {
+      height: 902px;
+    }
+    @media (min-width: 1270px) {
+      width: 46.4%;
+      height: 902px;
+      float: left;
+    }
+    @media (min-width: 1690px) {
+      background-position: center;
+    }
+}
