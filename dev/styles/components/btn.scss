@@ -1,0 +1,143 @@
+.btn-block {
+  width: 125px;
+  margin: 30px auto 0;
+    @media (min-width: 485px) {
+      width: 266px;
+    }
+    @media (min-width: 720px) {
+      margin: 181px auto 0;
+      width: 467px;
+    }
+
+  &__elem {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: $fontOneLine;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    @media (min-width: 485px) {
+      display: inline-block;
+      margin: 0;
+    }
+    &:hover {
+      background-color: $akcentColor;
+      border: 2px solid $akcentColor;
+      transition: all linear 400ms;
+    }
+    @media (min-width: 720px) {
+      font-size: 21px;
+    }
+    &_started {
+      padding: 10px 5px 9px 6px;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 15px;
+      @media (min-width: 485px) {
+        margin-right: 19px;
+        margin-left: 4px;
+        margin-bottom: 0;
+      }
+      @media (min-width: 720px) {
+        padding: 16px 39px 18px 37px;
+      }
+    }
+    &_portfolio {
+      padding: 10px 5px 10px 5px;
+      @media (min-width: 720px) {
+        padding: 16px 27px 18px 32px;
+      }
+    }
+  }
+}
+
+
+.sample__btn {
+  display: block;
+  width: 125px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 9px 0 11px 18px;
+  margin-top: 14px;
+  background-color: $sampleBtnBgColor;
+  color: #fff;
+    &:hover {
+      background-color: $accentColorHover;
+      transition: all linear 200ms;
+      box-shadow: 2px 2px 10px #8d8c8c;
+    }
+    &:active {
+      background-color:  $akcentColor;
+      box-shadow:2px 2px 10px $accentColorHover inset;
+      transform: scale(0.99);
+      transition: background-color linear 400ms;
+    }
+}
+
+.slick-prev {
+  left: 0;
+  background-position: 7px 9px;
+    @media (min-width: 490px) {
+      background-position: 14px 18px;
+    }
+    @media (min-width: 620px) {
+      left: 20px;
+    }
+    @media (min-width: 1510px) {
+      left: -156px;
+    }
+    @media (min-width: 1710px) {
+      left: -256px;
+    }
+}
+
+.slick-next {
+  right: 0;
+  background-position: -59px 8px;
+    @media (min-width: 490px) {
+      background-position: -55px 18px;
+    }
+    @media (min-width: 620px) {
+      right: 20px;
+    }
+    @media (min-width: 1510px) {
+      right: -156px;
+    }
+    @media (min-width: 1710px) {
+      right: -259px;
+    }
+}
+
+.slick-arrow{
+  position: absolute;
+  top: 43%;
+  font-size: 0;
+  width: 37px;
+  height: 44px;
+  background-color: #212121;
+  border: none;
+  outline: none;
+  background-image: url('../img/arrowsSlider.png');
+  background-repeat: no-repeat;
+  z-index: 80;
+    &:hover {
+      background-color: rgba(#212121, 0.5);
+      border-radius: 50%;
+      transition: all ease-in-out 300ms;
+    }
+    @media (min-width: 490px) {
+      width: 48px;
+      height: 56px;
+      top: 27%;
+    }
+  @media (min-width: 1510px) {
+    top: 40.5%;
+  }
+}
+
+.slick-dots > .slick-active {
+  background-color: #414141;
+  transition: background-color ease-in-out 300ms;
+}

@@ -1,0 +1,17 @@
+.mobi__nav-home {
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: -36px;
+  width: 30px;
+  overflow: hidden;
+  transition: right ease-in-out .5s;
+  @media (min-width: 720px) {
+    display: none;
+  }
+}
+
+.mobi__nav-home_open {
+  right: 6px;
+  transition: right ease-in-out .5s;
+}

@@ -1,0 +1,30 @@
+.tweet {
+  &__conteiner {
+    padding-left: 10px;
+    padding-right: 10px;
+    @media (min-width: 1018px) {
+      width: 1008px;
+      margin: 0 auto;
+      padding-right:0;
+      padding-left:0;
+    }
+  }
+  &-link {
+    color: $akcentColor;
+    transition: color ease-in-out 300ms;
+      &:hover {
+        color: $accentColorHover;
+        transition: color ease-in-out 300ms;
+      }
+    &:active {
+      color: $akcentColor;
+      transition: color ease-in-out 200ms;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}

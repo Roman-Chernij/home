@@ -1,0 +1,35 @@
+.sidebar {
+    &-form {
+      width: 100%;
+      position: relative;
+      margin-bottom: 15px;
+        @media (min-width: 960px) {
+          margin-bottom: 53px;
+        }
+    }
+    &-categories {
+      width: 100%;
+      float: none;
+
+    }
+    &-archives {
+      width: 100%;
+      float: none;
+      margin-top: 0;
+        @media (min-width: 960px) {
+          margin-top: 83px;
+        }
+    }
+    &-tags {
+      width: 100%;
+      float: none;
+    }
+    &-tabs {
+      width: 100%;
+      float: none;
+      margin-bottom: 20px;
+        @media (min-width: 960px) {
+          margin-bottom: 0;
+        }
+    }
+}

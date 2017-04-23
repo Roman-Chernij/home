@@ -1,0 +1,111 @@
+.header {
+    &-page {
+      background-image: url('../img/head-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center 0;
+      padding-top: 20px;
+      padding-bottom: 155px;
+        @media (min-width: 768px) {
+          padding-top: 111px;
+        }
+    }
+    &-home {
+      background-image: url('../img/backgroundHeader.jpg');
+      background-repeat: no-repeat;
+      background-position:center;
+      background-size: cover;
+    }
+    &-content {
+      background-color: rgba(#000, 0.5);
+    }
+    &-conteiner {
+      position: relative;
+    }
+    &-slider {
+      padding-top: 40px;
+      padding-bottom: 30px;
+        @media (min-width: 720px) {
+          padding-top: 366px;
+          padding-bottom: 297px;
+        }
+      &__elem {
+        color: #fff;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-family: $fontOneLine;
+        text-align: center;
+        line-height: 1.1;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        @media (min-width: 970px) {
+          padding-left: 0;
+          text-align: right;
+        }
+        @media (min-width: 320px) and (max-width: 1110px) {
+          font-size: calc(0.0563 * 100vw + 6.984px);
+        }
+        @media (min-width: 1111px) {
+          font-size: 69.5px;
+        }
+        @media (min-width: 1210px) {
+          padding-right: 0;
+        }
+        &__item {
+          font-family: $fontTwoLine;
+          margin-left: 20%;
+          margin-right: 15%;
+          @media (min-width: 970px) {
+            margin-left: 551px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-title {
+      text-align: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      color: #fff;
+      position: relative;
+        @media (min-width: 685px) {
+          &:after {
+            content: '';
+            width: 64px;
+            height: 3px;
+            position: absolute;
+            top: 28px;
+            left: -61px;
+            background-color: $akcentColor;
+          }
+          &:before {
+            content: '';
+            width: 64px;
+            height: 3px;
+            position: absolute;
+            top: 28px;
+            right: -61px;
+            background-color: $akcentColor;
+          }
+        }
+        @media (min-width: 320px) and (max-width: 1200px) {
+          font-size: calc(0.0386 * 100vw + 17.648px);
+        }
+        @media (min-width: 880px) {
+          &:after {
+            content: '';
+            top: 38px;
+            left: -120px;
+          }
+          &:before {
+            content: '';
+            top: 38px;
+            right: -140px;
+          }
+        }
+        @media (min-width: 1201px) {
+          font-size: 69px;
+        }
+    }
+}
