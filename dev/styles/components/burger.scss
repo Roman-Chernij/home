@@ -14,6 +14,16 @@
       display: block;
       font-size: 30px;
       color: #fff;
+      transition: color ease-in-out 300ms;
+        &:hover {
+          cursor: pointer;
+          color: $accentColorHover;
+          transition: color ease-in-out 300ms;
+        }
+        &:active{
+          color: $akcentColor;
+          transition: color ease-in-out 300ms;
+        }
     }
 }
 

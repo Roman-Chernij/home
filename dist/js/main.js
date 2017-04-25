@@ -55,11 +55,15 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     $('.story__slider').slick({
         infinite: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 3500,
         arrows: false
     });
     $('.feedback__slider').slick({
         infinite: false,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2500,
         arrows: false
     });
 
@@ -97,7 +101,7 @@ function Page() {
 function HomeBlog() {
     new MobiMenu();
     new HeaderSearch();
-    new Skills();
+    //new Skills();
     new TabsHome();
     new Social();
 }
@@ -155,14 +159,14 @@ MobiMenu.prototype.menuOpen = function () {
   this.mobiMenu.classList.add('mobi-menu-open');
   this.mobiNavHome = this.mobiMenu.querySelector('.mobi__nav-home');
   this.mobiNavHome.classList.add('mobi__nav-home_open');
-}
+};
 
 
 MobiMenu.prototype.menuClose = function () {
   this.mobiMenu.classList.remove('mobi-menu-open');
   this.mobiNavHome.classList.remove('mobi__nav-home_open');
   this.mobiMenu.addEventListener("transitionend", this.remChild.bind(this));
-}
+};
 
 MobiMenu.prototype.remChild = function () {
   if(this.mobiMenu.classList.contains("mobi-menu-open")) {
@@ -171,7 +175,7 @@ MobiMenu.prototype.remChild = function () {
     this.mobiMenu.removeChild(this.navHome);
 
 this.mobiMenu.removeEventListener("transitionend", this.remChild.bind(this));
-}
+};
 
 
 function HeaderSearch() {
@@ -208,11 +212,13 @@ HeaderSearch.prototype.animationFalse = function () {
     this.HeaderSearchBlock.classList.add("header-search_display-none");
 };
 
-
+/*
 function Skills() {
     this.skillsBlock = document.querySelector('.skills');
     this.skillsElem = this.skillsBlock.querySelectorAll('.skills-list');
-    this.lineProgress();
+    this.skillsElem12 = this.skillsBlock.querySelector('.elem-progress_photoshop').attributes;
+    console.log(this.skillsElem12);
+   // this.lineProgress();
 }
 
 Skills.prototype.lineProgress = function () {
@@ -229,7 +235,7 @@ Skills.prototype.lineProgress = function () {
         }
     }
 };
-
+*/
 
 /*---------- Tabs ------------*/
 

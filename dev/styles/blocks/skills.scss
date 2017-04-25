@@ -44,12 +44,27 @@
   padding: 6px 0 0 10px;
   top: 21px;
   background-color: $akcentColor;
+    &:before {
+      position: absolute;
+      top: 7px;
+      left: -12px;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 12px solid $akcentColor;
+      border-bottom: 7px solid transparent;
+    }
     @media (min-width: 490px) {
       font-size: 16px;
       right: 11px;
       height: 33px;
       width: 47.5px;
       padding: 5px 0 0 10px;
+        &:before {
+          top: 11px;
+        }
     }
     @media (min-width: 690px) {
       font-size: 18px;
@@ -63,27 +78,6 @@
     }
     @media (min-width: 1310px) {
       font-size: 20px;
-    }
-    &-item {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: relative;
-        &:before {
-          position: absolute;
-          top: 0;
-          left: -22px;
-          content: '';
-          display: block;
-          width: 0;
-          height: 0;
-          border-top: 7px solid transparent;
-          border-right: 12px solid $akcentColor;
-          border-bottom: 7px solid transparent;
-        }
-        @media (min-width: 490px) {
-          top: 4px;
-        }
     }
 }
 
@@ -106,110 +100,48 @@
   width: 80%;
   height: 17px;
   background-color: $backgroundProgress;
+  &::after {
+    content: "";
+    display: block;
+    background-color: $akcentColor;
+
+    height: 100%;
+  }
     @media (min-width: 390px) {
       width: 84.7%;
     }
 }
 
-.progress-line {
-  display: block;
-  background-color: $akcentColor;
-  width:80%;
-  height: 100%;
-}
+.elem-progress {
+    &_photoshop {
+        &::after {
+          content: '';
+          width: 80.7%;
+        }
 
-
-
-
-
-///-------------------
-
-.skills-info {
-  float: left;
-}
-
-.skills-box {
-  @include clearfix;
-}
-
-.skills-info_block {
-  width: 80%;
-  padding-bottom: 35px;
-  @media (min-width: 424px) {
-    width: 83%;
-  }
-  @media (min-width: 485px) {
-    width: 85%;
-  }
-}
-
-.skills-info_number {
-  width: 20%;
-  padding: 20px 2px 25px 11px;
-  position: relative;
-  @media (min-width: 360px) {
-    padding: 20px 2px 25px 25px;
-  }
-  @media (min-width: 424px) {
-    width: 17%;
-  }
-  @media (min-width: 485px) {
-    width: 15%;
-  }
-  @media (min-width: 580px) {
-    padding: 20px 2px 25px 38px;
-  }
-  @media (min-width: 660px) {
-    padding: 20px 2px 25px 50px;
-  }
-  @media (min-width: 720px) {
-    padding: 20px 2px 25px 55px;
-  }
-}
-
-.skills-info__box {
-  padding-right: 3px;
-}
-
-.skills-info__box__name {
-
-}
-
-.skills-info__box__progress {
-  width: 100%;
-  height: 17px;
-  background-color: $backgroundProgress;
-}
-
-.skills-info_number-content {
-}
-
-
-.triangle-left {
-  position: absolute;
-  top: 30px;
-  left: -1px;
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-right: 12px solid $akcentColor;
-  border-bottom: 7px solid transparent;
-  @media (min-width: 360px) {
-    left: 13px;
-  }
-  @media (min-width: 580px) {
-    left: 26px;
-  }
-  @media (min-width: 660px) {
-    top: 33px;
-    left: 38px;
-  }
-  @media (min-width: 720px) {
-    left: 44px;
-  }
-}
-
-.skills-info__box__name_mod {
-  text-transform: uppercase;
+    }
+    &_illustrator {
+      &::after {
+        content: '';
+        width: 58.6%;
+      }
+    }
+    &_indesign {
+      &::after {
+        content: '';
+        width: 71.6%;
+      }
+    }
+    &_html5 {
+      &::after {
+        content: '';
+        width: 51%;
+      }
+    }
+    &_php{
+      &::after {
+        content: '';
+        width: 89.4%;
+      }
+    }
 }

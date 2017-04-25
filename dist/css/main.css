@@ -683,6 +683,18 @@ p {
   display: block;
   font-size: 30px;
   color: #fff;
+  transition: color ease-in-out 300ms;
+}
+
+.burger__item:hover {
+  cursor: pointer;
+  color: rgba(255, 191, 94, 0.98);
+  transition: color ease-in-out 300ms;
+}
+
+.burger__item:active {
+  color: #f39c11;
+  transition: color ease-in-out 300ms;
 }
 
 .burger-page:before, .burger-page:after {
@@ -1009,6 +1021,13 @@ p {
   top: -2px;
   right: 0;
   font-size: 24px;
+  transition: color ease-in-out 300ms;
+}
+
+.form__label-submit:hover {
+  cursor: pointer;
+  color: #f39c11;
+  transition: color ease-in-out 300ms;
 }
 
 .search__submit {
@@ -2133,102 +2152,14 @@ p {
 
 .header-search {
   position: absolute;
-  bottom: -87px;
-  right: 0;
-}
-
-.header-search_display-none {
-  display: none;
-}
-
-.header-search_display-block {
-  display: block;
-}
-
-.header-search_true {
-  animation: search-visable ease 2s 1;
-  transition: animation ease 300ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes search-visable {
-  0% {
-    transform-origin: top;
-    transform: rotateX(-90deg);
-    transition: all ease 500ms;
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0deg);
-    transition: all ease 500ms;
-    opacity: 1;
-  }
-}
-
-.header-search_false {
-  animation: search-none ease 2s 1;
-  transition: animation ease 300ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes search-none {
-  0% {
-    transform: rotateX(0deg);
-    transition: all ease 500ms;
-    opacity: 1;
-  }
-  100% {
-    transform-origin: top;
-    transform: rotateX(-90deg);
-    transition: all ease 500ms;
-    opacity: 0;
-  }
-}
-
-.search-block__input {
-  width: 100%;
-  font-size: 19px;
-  padding: 7px 42px 7px 10px;
-  border: none;
-  outline: none;
-}
-
-.search-block__submit {
-  display: none;
-}
-
-.search-block__submit-label {
-  display: block;
-  position: absolute;
-  top: 1px;
-  right: 3px;
-  width: 37px;
-  height: 33px;
-}
-
-.search-block__submit-label:hover {
-  cursor: pointer;
-  background-color: #f3b212;
-}
-
-.search-block__submit-label_search-icon {
-  font-size: 30px;
-}
-
-.search-block {
-  position: relative;
-  width: 252px;
-}
-
-.header-search {
-  position: absolute;
-  bottom: -37px;
-  right: 0;
+  bottom: -369px;
+  z-index: 10;
 }
 
 @media (min-width: 940px) {
   .header-search {
-    bottom: -87px;
+    bottom: -85px;
+    right: 3px;
   }
 }
 
@@ -2651,6 +2582,19 @@ p {
   background-color: #f39c11;
 }
 
+.elem-number:before {
+  position: absolute;
+  top: 7px;
+  left: -12px;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 12px solid #f39c11;
+  border-bottom: 7px solid transparent;
+}
+
 @media (min-width: 490px) {
   .elem-number {
     font-size: 16px;
@@ -2658,6 +2602,9 @@ p {
     height: 33px;
     width: 47.5px;
     padding: 5px 0 0 10px;
+  }
+  .elem-number:before {
+    top: 11px;
   }
 }
 
@@ -2680,32 +2627,6 @@ p {
 @media (min-width: 1310px) {
   .elem-number {
     font-size: 20px;
-  }
-}
-
-.elem-number-item {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-}
-
-.elem-number-item:before {
-  position: absolute;
-  top: 0;
-  left: -22px;
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-right: 12px solid #f39c11;
-  border-bottom: 7px solid transparent;
-}
-
-@media (min-width: 490px) {
-  .elem-number-item {
-    top: 4px;
   }
 }
 
@@ -2733,140 +2654,42 @@ p {
   background-color: #ececec;
 }
 
+.elem-progress::after {
+  content: "";
+  display: block;
+  background-color: #f39c11;
+  height: 100%;
+}
+
 @media (min-width: 390px) {
   .elem-progress {
     width: 84.7%;
   }
 }
 
-.progress-line {
-  display: block;
-  background-color: #f39c11;
-  width: 80%;
-  height: 100%;
+.elem-progress_photoshop::after {
+  content: '';
+  width: 80.7%;
 }
 
-.skills-info {
-  float: left;
+.elem-progress_illustrator::after {
+  content: '';
+  width: 58.6%;
 }
 
-.skills-box:before, .skills-box:after {
-  content: "";
-  display: table;
+.elem-progress_indesign::after {
+  content: '';
+  width: 71.6%;
 }
 
-.skills-box:after {
-  clear: both;
+.elem-progress_html5::after {
+  content: '';
+  width: 51%;
 }
 
-.skills-info_block {
-  width: 80%;
-  padding-bottom: 35px;
-}
-
-@media (min-width: 424px) {
-  .skills-info_block {
-    width: 83%;
-  }
-}
-
-@media (min-width: 485px) {
-  .skills-info_block {
-    width: 85%;
-  }
-}
-
-.skills-info_number {
-  width: 20%;
-  padding: 20px 2px 25px 11px;
-  position: relative;
-}
-
-@media (min-width: 360px) {
-  .skills-info_number {
-    padding: 20px 2px 25px 25px;
-  }
-}
-
-@media (min-width: 424px) {
-  .skills-info_number {
-    width: 17%;
-  }
-}
-
-@media (min-width: 485px) {
-  .skills-info_number {
-    width: 15%;
-  }
-}
-
-@media (min-width: 580px) {
-  .skills-info_number {
-    padding: 20px 2px 25px 38px;
-  }
-}
-
-@media (min-width: 660px) {
-  .skills-info_number {
-    padding: 20px 2px 25px 50px;
-  }
-}
-
-@media (min-width: 720px) {
-  .skills-info_number {
-    padding: 20px 2px 25px 55px;
-  }
-}
-
-.skills-info__box {
-  padding-right: 3px;
-}
-
-.skills-info__box__progress {
-  width: 100%;
-  height: 17px;
-  background-color: #ececec;
-}
-
-.triangle-left {
-  position: absolute;
-  top: 30px;
-  left: -1px;
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-right: 12px solid #f39c11;
-  border-bottom: 7px solid transparent;
-}
-
-@media (min-width: 360px) {
-  .triangle-left {
-    left: 13px;
-  }
-}
-
-@media (min-width: 580px) {
-  .triangle-left {
-    left: 26px;
-  }
-}
-
-@media (min-width: 660px) {
-  .triangle-left {
-    top: 33px;
-    left: 38px;
-  }
-}
-
-@media (min-width: 720px) {
-  .triangle-left {
-    left: 44px;
-  }
-}
-
-.skills-info__box__name_mod {
-  text-transform: uppercase;
+.elem-progress_php::after {
+  content: '';
+  width: 89.4%;
 }
 
 .slider {
@@ -3619,6 +3442,7 @@ p {
 
 .form__field {
   width: 100%;
+  font-size: 25px;
 }
 
 .form__field:before, .form__field:after {
@@ -3658,12 +3482,6 @@ p {
   .part_mod-left {
     float: left;
   }
-}
-
-.field__name {
-  display: block;
-  width: 100%;
-  font-size: 25px;
 }
 
 .field__input {
@@ -3716,6 +3534,10 @@ p {
 .form__message {
   width: 100%;
   position: relative;
+}
+
+.form__message {
+  font-size: 25px;
 }
 
 .message__name {

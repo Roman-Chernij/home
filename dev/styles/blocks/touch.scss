@@ -28,6 +28,7 @@
 
 .form__field {
   width: 100%;
+  font-size: 25px;
   @include clearfix;
 }
 
@@ -50,12 +51,6 @@
     @media (min-width: 690px) {
       float: left;
     }
-}
-
-.field__name {
-  display: block;
-  width: 100%;
-  font-size: 25px;
 }
 
 .field__input {
@@ -106,6 +101,10 @@
 .form__message {
   width: 100%;
   position: relative;
+}
+
+.form__message {
+  font-size: 25px;
 }
 
 .message {

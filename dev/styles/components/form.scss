@@ -16,6 +16,12 @@
       top: -2px;
       right: 0;
       font-size: 24px;
+      transition: color ease-in-out 300ms;
+        &:hover {
+          cursor: pointer;
+          color: $akcentColor;
+          transition: color ease-in-out 300ms;
+        }
     }
 }
 
